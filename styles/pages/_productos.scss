@@ -1,0 +1,28 @@
+@import "../abstracts/mixins";
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    border-style: solid;
+    border-color: $colorSecundario;
+    background: $colorResaltado;
+    margin: 1rem;
+    height: 400px;
+    width: 205px;
+}
+
+.item__imagen{
+    height: 180px;
+    width: 100%;
+}
+
+.item__fichaTecnica{
+    background: $colorResaltado;
+}
+
+.item__precios{
+    background: $colorResaltado;
+}

@@ -1,0 +1,103 @@
+@import "../abstracts/mixins";
+
+
+
+.artDestacados__imagen {
+    height: 200px;
+}
+
+@keyframes flip {
+    0% {
+        transform: translateZ(0) rotateY(0);
+    }
+
+    100% {
+        transform: translateZ(160px) rotateY(180deg);
+    }
+}
+
+/*animista*/
+
+.artDestacados__texto {
+    transform: translate(3rem, -8rem);
+    overflow: hidden;
+    background-color: $colorSecundario;
+    border-style: solid;
+    border-color: $colorSecundario;
+    border-radius: 30px;
+    padding: 1rem;
+    visibility: hidden;
+    transition: transform 1s;
+}
+
+.artDestacados__primero--animacion:hover .artDestacados__imagen {
+    filter: blur(8px);
+    /*Lo vi en w3schools*/
+    animation: flip 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    /*animista*/
+}
+
+.artDestacados__primero--animacion:hover .artDestacados__texto {
+    visibility: visible;
+    transform: translate(1rem, -8rem);
+}
+
+.artDestacados__segundo--animacion:hover .artDestacados__imagen {
+    filter: blur(8px);
+    animation: flip 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    /*animista*/
+}
+
+.artDestacados__segundo--animacion:hover .artDestacados__texto {
+    visibility: visible;
+    transform: translate(1rem, -8rem);
+}
+
+.artDestacados__tercero--animacion:hover .artDestacados__imagen {
+    filter: blur(8px);
+    animation: flip 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    /*animista*/
+}
+
+.artDestacados__tercero--animacion:hover .artDestacados__texto {
+    visibility: visible;
+    transform: translate(1rem, -8rem);
+}
+
+.empresaInformacion{
+    display: grid;
+
+    @include responsive(sm){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @include responsive(lg){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.empresaInformacion__texto{
+    margin: 3rem;
+    padding: 3rem;
+    background-color: rgba(51, 71, 86, 0.75);
+    color:$colorBlanco;
+}
+
+.empresaInformacion__video {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+.empresaInformacio_iframe{
+    border: 0;
+    height: 100%;
+    left: 0;
+    position:absolute;
+    top: 0;
+    width: 100%;
+}

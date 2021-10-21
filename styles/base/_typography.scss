@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Roboto:wght@500&display=swap');
+@import "../abstracts/variables";
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+h1, h2, h3{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2em;
+}
+
+p{
+    color: $colorBlanco;
+    font-size: 1em;
+}

@@ -1,0 +1,102 @@
+@import "../abstracts/mixins";
+
+$alturaTotal:180px;
+
+/*
+$breakpoints:(
+    sm: 0px,
+    md: 768px,
+    lg: 1024px
+) 
+*/
+
+.header {
+
+    background: $colorResaltado;
+    width: 100%;
+    display: grid;
+    margin-bottom: 1rem;
+    border-style: solid;
+    border-radius: 0 0 15px 15px ;
+    border-color: $colorResaltado;
+
+    @include responsive(sm){
+        height: 180px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 100px;
+        grid-template-areas: "inicio"
+                            "enlaces";
+    }
+    
+    @include responsive(md){
+        height: 120px;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 120px;
+        grid-template-areas: "inicio enlaces";
+        position: relative;
+    }
+
+}
+
+.linkInicio {
+    grid-area: inicio;
+    display: flex;
+
+    @include responsive(sm){
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.linkInicio__logo {
+    padding: 10px;
+    
+    @include responsive(md){
+        padding: 10px;
+        height: 80px;
+    }
+}
+
+.linkInicio__titulo {
+    grid-area: inicio;
+    @include colorSombreado();
+    align-self: center;
+    white-space: nowrap;
+    
+}
+
+.nav {
+    grid-area: enlaces;
+    justify-self: center;
+
+    @include responsive(md){
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+
+.nav__enlaceItem{
+    @include responsive(md){
+        display:inline;
+    }
+}
+.nav__enlace {
+    @include colorSombreado();
+    padding: 5px;
+}
+
+.nav__enlace--focus:hover{
+    color: $colorPrimario;
+
+    @include responsive(sm){
+        text-shadow: none;
+    }
+
+    @include responsive(md){
+        text-decoration: underline;
+        text-underline-offset: 1em;
+        text-shadow: none;
+    }
+}
+

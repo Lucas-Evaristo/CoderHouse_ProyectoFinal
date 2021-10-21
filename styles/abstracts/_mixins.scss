@@ -1,0 +1,11 @@
+@mixin responsive($breakpoint){
+    @media screen and (min-width: map-get($breakpoints , $breakpoint)){
+        @content; 
+    }
+}
+
+@mixin colorSombreado{
+    color: $colorBlanco;
+    text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+}

@@ -1,0 +1,13 @@
+@import "./abstracts/variables";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./pages/index";
+@import "./pages/productos";
+@import "./pages/equiposarmados";
+@import "./pages/contacto";
+@import "./pages/ayuda";
+
+@import "./layout/header";
+@import "./layout/footer";

@@ -1,0 +1,24 @@
+.equipoArmado{
+    height: 200px;
+    display: flex;
+    margin: 1rem;
+    border-style: solid;
+    border-color: $colorSecundario;
+    background: $colorResaltado;
+    justify-content: center;
+}
+
+.equipoArmado__imagen{
+    height: 195px;
+    width: 200px;
+}
+
+.equipoArmado__fichaTecnica{
+    align-self: center;
+
+}
+
+.item__pedirPresupuesto{
+    align-self: center;
+    padding-left: 2rem;
+}
