@@ -14,11 +14,31 @@ $breakpoints:(
 
     background: $colorResaltado;
     width: 100%;
+    margin-bottom: 1rem;
+    border-style: solid;
+    border-radius: 0 0 15px 15px ;
+    border-color: $colorResaltado;
+
+    
+    @include responsive(sm){
+        height: 180px;
+    }
+    
+    @include responsive(md){
+        height: 120px;
+    }
+
+}
+
+.nav{
+    background: $colorResaltado;
+    width: 100%;
     display: grid;
     margin-bottom: 1rem;
     border-style: solid;
     border-radius: 0 0 15px 15px ;
     border-color: $colorResaltado;
+    position: relative;
 
     @include responsive(sm){
         height: 180px;
@@ -35,7 +55,6 @@ $breakpoints:(
         grid-template-areas: "inicio enlaces";
         position: relative;
     }
-
 }
 
 .linkInicio {
@@ -65,6 +84,7 @@ $breakpoints:(
     
 }
 
+/*
 .nav {
     grid-area: enlaces;
     justify-self: center;
@@ -74,8 +94,17 @@ $breakpoints:(
         bottom: 0;
     }
 }
+*/
 
-
+.nav__enlaces {
+    justify-self: center;
+    align-self: center;
+    @include responsive(md){
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
 .nav__enlaceItem{
     @include responsive(md){
         display:inline;

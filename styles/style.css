@@ -257,8 +257,6 @@ $breakpoints:(
 .header {
   background: #FF4C29;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
   margin-bottom: 1rem;
   border-style: solid;
   border-radius: 0 0 15px 15px;
@@ -267,6 +265,30 @@ $breakpoints:(
 
 @media screen and (min-width: 0px) {
   .header {
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 120px;
+  }
+}
+
+.nav {
+  background: #FF4C29;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 1rem;
+  border-style: solid;
+  border-radius: 0 0 15px 15px;
+  border-color: #FF4C29;
+  position: relative;
+}
+
+@media screen and (min-width: 0px) {
+  .nav {
     height: 180px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -277,7 +299,7 @@ $breakpoints:(
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .nav {
     height: 120px;
     -ms-grid-columns: 35% 65%;
         grid-template-columns: 35% 65%;
@@ -327,16 +349,30 @@ $breakpoints:(
   white-space: nowrap;
 }
 
+/*
 .nav {
-  grid-area: enlaces;
+    grid-area: enlaces;
+    justify-self: center;
+
+    @include responsive(md){
+        position: absolute;
+        bottom: 0;
+    }
+}
+*/
+.nav__enlaces {
   -ms-grid-column-align: center;
       justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media screen and (min-width: 768px) {
-  .nav {
+  .nav__enlaces {
     position: absolute;
     bottom: 0;
+    right: 0;
   }
 }
 
