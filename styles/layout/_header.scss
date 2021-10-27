@@ -64,6 +64,7 @@ $breakpoints:(
     @include responsive(sm){
         align-self: center;
         justify-self: center;
+        margin-bottom: 30px;
     }
 }
 
@@ -81,20 +82,9 @@ $breakpoints:(
     @include colorSombreado();
     align-self: center;
     white-space: nowrap;
+    font-size: 20px;
     
 }
-
-/*
-.nav {
-    grid-area: enlaces;
-    justify-self: center;
-
-    @include responsive(md){
-        position: absolute;
-        bottom: 0;
-    }
-}
-*/
 
 .nav__enlaces {
     justify-self: center;

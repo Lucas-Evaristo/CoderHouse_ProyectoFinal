@@ -38,90 +38,75 @@ p {
   font-size: 1em;
 }
 
-.artDestacados__imagen {
-  height: 200px;
+.articulosDestacados__imagen--hover:hover {
+  -webkit-animation: flip-diagonal 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+          animation: flip-diagonal 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
-@-webkit-keyframes flip {
+@-webkit-keyframes flip-diagonal {
   0% {
-    -webkit-transform: translateZ(0) rotateY(0);
-            transform: translateZ(0) rotateY(0);
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+            transform: rotate3d(1, 1, 0, 0deg);
   }
   100% {
-    -webkit-transform: translateZ(160px) rotateY(180deg);
-            transform: translateZ(160px) rotateY(180deg);
+    -webkit-transform: rotate3d(1, 1, 0, -360deg);
+            transform: rotate3d(1, 1, 0, -360deg);
   }
 }
 
-@keyframes flip {
+@keyframes flip-diagonal {
   0% {
-    -webkit-transform: translateZ(0) rotateY(0);
-            transform: translateZ(0) rotateY(0);
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+            transform: rotate3d(1, 1, 0, 0deg);
   }
   100% {
-    -webkit-transform: translateZ(160px) rotateY(180deg);
-            transform: translateZ(160px) rotateY(180deg);
+    -webkit-transform: rotate3d(1, 1, 0, -360deg);
+            transform: rotate3d(1, 1, 0, -360deg);
   }
 }
 
-/*animista*/
-.artDestacados__texto {
-  -webkit-transform: translate(3rem, -8rem);
-          transform: translate(3rem, -8rem);
-  overflow: hidden;
-  background-color: #334756;
-  border-style: solid;
-  border-color: #334756;
-  border-radius: 30px;
-  padding: 1rem;
-  visibility: hidden;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+.articulosDestacados {
+  width: vw;
+  position: relative;
 }
 
-.artDestacados__primero--animacion:hover .artDestacados__imagen {
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
-  /*Lo vi en w3schools*/
-  -webkit-animation: flip 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-          animation: flip 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  /*animista*/
+@media screen and (min-width: 0px) {
+  .articulosDestacados {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
 }
 
-.artDestacados__primero--animacion:hover .artDestacados__texto {
-  visibility: visible;
-  -webkit-transform: translate(1rem, -8rem);
-          transform: translate(1rem, -8rem);
+@media screen and (min-width: 768px) {
+  .articulosDestacados {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
 }
 
-.artDestacados__segundo--animacion:hover .artDestacados__imagen {
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
-  -webkit-animation: flip 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-          animation: flip 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  /*animista*/
+.articulosDestacados__texto {
+  text-align: center;
+  top: 80%;
 }
 
-.artDestacados__segundo--animacion:hover .artDestacados__texto {
-  visibility: visible;
-  -webkit-transform: translate(1rem, -8rem);
-          transform: translate(1rem, -8rem);
+@media screen and (min-width: 0px) {
+  .artDestacados__imagen {
+    margin: 10px;
+    height: 200px;
+    width: 92%;
+  }
 }
 
-.artDestacados__tercero--animacion:hover .artDestacados__imagen {
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
-  -webkit-animation: flip 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-          animation: flip 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  /*animista*/
-}
-
-.artDestacados__tercero--animacion:hover .artDestacados__texto {
-  visibility: visible;
-  -webkit-transform: translate(1rem, -8rem);
-          transform: translate(1rem, -8rem);
+@media screen and (min-width: 768px) {
+  .artDestacados__imagen {
+    height: 100%;
+    width: 500px;
+  }
 }
 
 .empresaInformacion {
@@ -147,11 +132,23 @@ p {
   }
 }
 
-.empresaInformacion__texto {
-  margin: 3rem;
-  padding: 3rem;
-  background-color: rgba(51, 71, 86, 0.75);
-  color: #FFE3E3;
+@media screen and (min-width: 0px) {
+  .empresaInformacion__texto {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(51, 71, 86, 0.75);
+    color: #FFE3E3;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .empresaInformacion__texto {
+    margin: 3rem;
+    padding: 3rem;
+    background-color: rgba(51, 71, 86, 0.75);
+    color: #FFE3E3;
+  }
 }
 
 .empresaInformacion__video {
@@ -202,17 +199,38 @@ p {
 }
 
 .equipoArmado {
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1rem;
-  border-style: solid;
   border-color: #334756;
   background: #FF4C29;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (min-width: 0px) {
+  .equipoArmado {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .equipoArmado {
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1rem;
+    border-style: solid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .equipoArmado__imagen {
@@ -324,6 +342,7 @@ $breakpoints:(
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -347,19 +366,9 @@ $breakpoints:(
       -ms-grid-row-align: center;
       align-self: center;
   white-space: nowrap;
+  font-size: 20px;
 }
 
-/*
-.nav {
-    grid-area: enlaces;
-    justify-self: center;
-
-    @include responsive(md){
-        position: absolute;
-        bottom: 0;
-    }
-}
-*/
 .nav__enlaces {
   -ms-grid-column-align: center;
       justify-self: center;

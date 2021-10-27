@@ -1,11 +1,25 @@
 .equipoArmado{
-    height: 200px;
-    display: flex;
-    margin: 1rem;
-    border-style: solid;
+ 
+
     border-color: $colorSecundario;
     background: $colorResaltado;
-    justify-content: center;
+
+    
+    @include responsive(sm){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    @include responsive(md){
+        height: 200px;
+        display: flex;
+        margin: 1rem;
+        border-style: solid;
+        justify-content: center;
+    }
 }
 
 .equipoArmado__imagen{
@@ -21,4 +35,8 @@
 .item__pedirPresupuesto{
     align-self: center;
     padding-left: 2rem;
+}
+
+.item__pedirPresupuesto{
+
 }
