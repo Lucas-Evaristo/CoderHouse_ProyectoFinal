@@ -1,7 +1,34 @@
 @import "../abstracts/mixins";
 
+
+.articulosDestacados__contenedor {
+    position: relative;
+}
+
+.articulosDestacados__link {
+    position: absolute;
+    background-color: $colorSecundario;
+    border-style: solid;
+    border-color: $colorBlanco;
+    border-radius: 30px;
+    padding: 2rem;
+    top: 40%;
+    left: 30%;
+    display: none;
+}
+
 .articulosDestacados__imagen--hover:hover {
-    animation: flip-diagonal .4s cubic-bezier(.455, .03, .515, .955) both
+    animation: flip-diagonal .4s cubic-bezier(.455, .03, .515, .955) both;
+    filter: blur(8px);
+}
+
+.articulosDestacados__link:hover{
+    display: block;
+}
+
+
+.articulosDestacados__imagen--hover:hover + .articulosDestacados__link {
+    display: block;
 }
 
 @keyframes flip-diagonal {
@@ -16,7 +43,6 @@
 
 .articulosDestacados {
     width: vw;
-    position: relative;
 
     @include responsive(sm) {
         display: grid;
@@ -30,10 +56,10 @@
     }
 }
 
-.articulosDestacados__texto{
-    text-align: center;
-    top: 80%;
+.artDestacados__imagen {
+    bottom: 50px;
 }
+
 
 
 .artDestacados__imagen {
