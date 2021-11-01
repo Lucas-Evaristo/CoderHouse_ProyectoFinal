@@ -1,28 +1,32 @@
 @import "../abstracts/mixins";
 
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .productos{
+    padding-left: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .item{
     border-style: solid;
-    border-color: $colorSecundario;
-    background: $colorResaltado;
+    @include fondoGlass;
     margin: 1rem;
     height: 400px;
     width: 205px;
 }
 
 .item__imagen{
+    margin: 15px;
     height: 180px;
-    width: 100%;
-}
-
-.item__fichaTecnica{
-    background: $colorResaltado;
-}
-
-.item__precios{
-    background: $colorResaltado;
+    width: 85%;
+    border-style: solid;
+    border-color: $colorBlanco;
+    border-radius: 30px;
 }

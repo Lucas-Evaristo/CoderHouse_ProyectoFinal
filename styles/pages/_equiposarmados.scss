@@ -1,8 +1,11 @@
-.equipoArmado{
- 
+.equipos{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
 
-    border-color: $colorSecundario;
-    background: $colorResaltado;
+.equipoArmado{
+    @include fondoGlass;
 
     
     @include responsive(sm){

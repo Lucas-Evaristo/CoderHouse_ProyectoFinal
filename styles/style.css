@@ -39,7 +39,8 @@ p {
 }
 
 .articulosDestacados__contenedor {
-  position: relative;
+  display: -ms-grid;
+  display: grid;
 }
 
 .articulosDestacados__link {
@@ -49,8 +50,7 @@ p {
   border-color: #FFE3E3;
   border-radius: 30px;
   padding: 2rem;
-  top: 40%;
-  left: 30%;
+  margin: auto;
   display: none;
 }
 
@@ -92,7 +92,8 @@ p {
 }
 
 .articulosDestacados {
-  width: vw;
+  width: 90%;
+  padding-left: 10%;
 }
 
 @media screen and (min-width: 0px) {
@@ -192,39 +193,75 @@ p {
   width: 100%;
 }
 
+.titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .productos {
+  padding-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item {
   border-style: solid;
-  border-color: #334756;
-  background: #FF4C29;
+  background: rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   margin: 1rem;
   height: 400px;
   width: 205px;
 }
 
 .item__imagen {
+  margin: 15px;
   height: 180px;
-  width: 100%;
+  width: 85%;
+  border-style: solid;
+  border-color: #FFE3E3;
+  border-radius: 30px;
 }
 
-.item__fichaTecnica {
-  background: #FF4C29;
-}
-
-.item__precios {
-  background: #FF4C29;
+.equipos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .equipoArmado {
-  border-color: #334756;
-  background: #FF4C29;
+  background: rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @media screen and (min-width: 0px) {
@@ -440,12 +477,43 @@ $breakpoints:(
   }
 }
 
-.footer {
+.contenedorFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   background-color: #334756;
   width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.enlacesFooter {
+  color: #FFE3E3;
+}
+
+.redes {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .redes__icono {
   height: 60px;
+}
+
+.legales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

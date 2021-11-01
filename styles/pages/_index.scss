@@ -2,7 +2,7 @@
 
 
 .articulosDestacados__contenedor {
-    position: relative;
+    display: grid;
 }
 
 .articulosDestacados__link {
@@ -12,8 +12,7 @@
     border-color: $colorBlanco;
     border-radius: 30px;
     padding: 2rem;
-    top: 40%;
-    left: 30%;
+    margin: auto;
     display: none;
 }
 
@@ -42,7 +41,8 @@
 }
 
 .articulosDestacados {
-    width: vw;
+    width: 90%;
+    padding-left: 10%;
 
     @include responsive(sm) {
         display: grid;
@@ -59,8 +59,6 @@
 .artDestacados__imagen {
     bottom: 50px;
 }
-
-
 
 .artDestacados__imagen {
 
@@ -92,8 +90,6 @@
 }
 
 .empresaInformacion__texto {
-
-
 
     @include responsive(sm) {
         margin: 10px;
