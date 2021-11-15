@@ -43,14 +43,13 @@
 .articulosDestacados {
     width: 90%;
     padding-left: 10%;
+    display: grid;
 
     @include responsive(sm) {
-        display: grid;
         grid-template-columns: 100%;
     }
 
     @include responsive(md) {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
     }
