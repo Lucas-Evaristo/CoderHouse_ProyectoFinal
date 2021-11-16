@@ -1,13 +1,13 @@
-@import "./abstracts/variables";
+@import "./sass/abstracts/variables";
 
-@import "./base/reset";
-@import "./base/typography";
+@import "./sass/base/reset";
+@import "./sass/base/typography";
 
-@import "./pages/index";
-@import "./pages/productos";
-@import "./pages/equiposarmados";
-@import "./pages/contacto";
-@import "./pages/ayuda";
+@import "./sass/pages/index";
+@import "./sass/pages/productos";
+@import "./sass/pages/equiposarmados";
+@import "./sass/pages/contacto";
+@import "./sass/pages/ayuda";
 
-@import "./layout/header";
-@import "./layout/footer";
+@import "./sass/layout/header";
+@import "./sass/layout/footer";

@@ -94,12 +94,12 @@ p {
 .articulosDestacados {
   width: 90%;
   padding-left: 10%;
+  display: -ms-grid;
+  display: grid;
 }
 
 @media screen and (min-width: 0px) {
   .articulosDestacados {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
@@ -107,8 +107,6 @@ p {
 
 @media screen and (min-width: 768px) {
   .articulosDestacados {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -206,7 +204,6 @@ p {
 }
 
 .productos {
-  padding-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,20 +219,16 @@ p {
 
 .item {
   border-style: solid;
-  background: rgba(255, 255, 255, 0.45);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #FF4C29;
+  text-align: left;
   margin: 1rem;
-  height: 400px;
-  width: 205px;
+  height: 450px;
+  width: 300px;
 }
 
 .item__imagen {
   margin: 15px;
+  margin-left: 22px;
   height: 180px;
   width: 85%;
   border-style: solid;
@@ -243,96 +236,97 @@ p {
   border-radius: 30px;
 }
 
+.item__titulo {
+  text-align: center;
+  text-shadow: black 1px 0 10px;
+}
+
+.tituloEquiposArmados {
+  text-align: center;
+  color: #FFE3E3;
+}
+
 .equipos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.equipoArmado {
-  background: rgba(255, 255, 255, 0.45);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @media screen and (min-width: 0px) {
-  .equipoArmado {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+  .equipos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .equipoArmado {
-    height: 200px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 1rem;
-    border-style: solid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .equipos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
-.equipoArmado__imagen {
-  height: 195px;
-  width: 200px;
-}
-
-.equipoArmado__fichaTecnica {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.item__pedirPresupuesto {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-left: 2rem;
+.equipoArmado {
+  background-color: #FF4C29;
 }
 
 .formulario {
   background-color: #FF4C29;
-  margin: 3rem;
-  padding: 3rem;
+}
+
+@media screen and (min-width: 0px) {
+  .formulario {
+    margin: 3rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .formulario {
+    margin: 10rem;
+    padding: 3rem;
+  }
+}
+
+.mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mapa__frame {
+  height: 400px;
+  width: 90%;
 }
 
 .acordeonPreguntas {
   margin: 3rem;
+  height: 700px;
 }
 
 .titulo {
   color: #FFE3E3;
 }
 
-/*
-$breakpoints:(
-    sm: 0px,
-    md: 768px,
-    lg: 1024px
-) 
-*/
 .header {
   background: #FF4C29;
   width: 100%;
